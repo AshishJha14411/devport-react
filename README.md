@@ -5,6 +5,12 @@ This is a sample page made using react. The website focuses on implementing the 
 
 3 Hours
 
+## To Run the files in your system
+
+`npm install` to install all the dependencies of the project
+
+`npm start` to start the localhost server
+
 ## Things Learned
 
 - Breaking Code into Components
