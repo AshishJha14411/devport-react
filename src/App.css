@@ -1,38 +1,1081 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  font-family: "Montserrat";
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background-color: #111111;
+  color: white;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+/* 
+<---NavBar--->
+ */
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: rgb(218, 218, 218);
+}
+.navbar {
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-items {
+  padding-right: 8rem;
+  display: flex;
+  width: 40rem;
+  justify-content: space-between;
+}
+.nav-item a {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+body > div > div > .nav-items > li:nth-child(1) > a::after {
+  content: " ";
+  position: absolute;
+  margin-top: 0.3rem;
+  margin-left: 0.4rem;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 10px solid rgb(255, 255, 255);
+}
+body > div > div > ul > li:nth-child(5) > a::after {
+  content: " ";
+  position: absolute;
+  margin-top: 0.3rem;
+  margin-left: 0.4rem;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 10px solid rgb(255, 255, 255);
+}
+img[alt="logo"] {
+  margin-top: -0.5rem;
+  transform: scale(0.6);
+  filter: invert(38%) sepia(50%) saturate(5779%) hue-rotate(336deg)
+    brightness(104%) contrast(112%);
+}
+/* 
+<---Main--->
+ */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0rem 4rem 0rem 4rem;
+}
+.intro {
+  display: flex;
+  height: 30rem;
+  padding-bottom: 5rem;
+}
+.intro-img {
+  padding-left: 2rem;
+}
+img[alt="guy"] {
+  margin-top: -3.5em;
+  width: 35rem;
+}
+/* 
+<---Intro Text--->
+*/
+.intro-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.name-text {
+  font-size: 1.25rem;
+  color: #c91b28;
+}
+.designation {
+  font-size: 1.8rem;
+}
+.description {
+  width: 35rem;
+  padding-bottom: 2rem;
+}
+.about-me {
+  width: 9rem;
+  padding: 0.9rem 1rem;
+  background-color: #c91b28;
+  color: white;
+}
+.backshadow {
+  z-index: 1;
+  position: absolute;
+  width: 45rem;
+  left: 0;
+  margin: 31.5rem 0 0 0rem;
+  height: 50rem;
+  background-color: #181818;
+}
+.cards {
+  display: flex;
+  justify-content: flex-start;
+  height: 20rem;
+  width: 80%;
+  z-index: 2;
+  margin-bottom: 5rem;
+  padding: 1rem 4rem 0rem 15rem;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0rem 2rem 2rem 2rem;
+  height: 20rem;
+  overflow: hidden;
+  width: 14rem;
+  margin-right: 1rem;
+  background-color: #1e1e1e;
+}
+.card:hover {
+    cursor: pointer;
+  transition: ease-in-out 0.4s;
+  transform: scale(1.1);
+}
+img[alt="tab"] {
+  width: 10rem;
+  margin-left: -2rem;
+  padding-bottom: 1rem;
+}
+img[alt="note"] {
+  width: 10rem;
+  margin-left: -2rem;
+  padding-bottom: 2rem;
+}
+img[alt="rule"] {
+  width: 10rem;
+  margin-left: -2rem;
+  margin-top: -1.5rem;
+  padding-bottom: 2rem;
+}
+.card-head {
+  margin-top: -3rem;
+  padding: 1rem 1rem 0rem 0;
+}
+.card-des {
+  padding: 1rem 1rem 1rem 0;
+}
+.know-more {
+  color: #c91b28;
+}
+.link {
+  display: flex;
+}
+.arrow {
+  position: relative;
+  margin-top: 0.4rem;
+  margin-left: 0.4rem;
+  width: 1rem;
+  height: 2px;
+  background-color: #c91b28;
+}
+.arrow-mid {
+  position: relative;
+  margin-top: 0.4rem;
+  margin-left: 0.4rem;
+  width: 1rem;
+  height: 2px;
+  background-color: #ffffff;
+}
+body > div.main > div.cards > div.card.mid > div.link > div {
+  background-color: white;
+}
+body > div.main > div.cards > div.card.mid > div.link > div::before {
+  background-color: #fff;
+}
+body > div.main > div.cards > div.card.mid > div.link > div::after {
+  background-color: #fff;
+}
+.arrow::before {
+  content: "";
+  display: inline-block;
+  margin-top: -0.16rem;
+  margin-left: 0.6rem;
+  width: 0.6rem;
+  height: 2px;
+  background-color: #c91b28;
+  transform: rotate(45deg);
+  position: absolute;
+}
+.arrow::after {
+  content: "";
+  display: inline-block;
+  margin-top: 0.18rem;
+  margin-left: 0.6rem;
+  width: 0.6rem;
+  height: 2px;
+  background-color: #c91b28;
+  transform: rotate(-45deg);
+  position: absolute;
+}
+.arrow-mid::before {
+  content: "";
+  display: inline-block;
+  margin-top: -0.16rem;
+  margin-left: 0.6rem;
+  width: 0.6rem;
+  height: 2px;
+  background-color: #ffffff;
+  transform: rotate(45deg);
+  position: absolute;
+}
+.arrow-mid::after {
+  content: "";
+  display: inline-block;
+  margin-top: 0.18rem;
+  margin-left: 0.6rem;
+  width: 0.6rem;
+  height: 2px;
+  background-color: #ffffff;
+  transform: rotate(-45deg);
+  position: absolute;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.mid {
+  color: #ffffff;
+  background-color: #c91b28;
+}
+.numbers {
+  z-index: 2;
+  display: flex;
+  width: 80%;
+  margin-left: 10rem;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-bottom: 7rem;
+}
+.bigtext {
+  padding-top: 3rem;
+}
+.bignum {
+  color: #c91b28;
+  text-align: center;
+  font-size: 3.25rem;
+  font-weight: 900;
+  margin-left: -4rem;
+}
+.bigtext h3 {
+  font-size: 1.5rem;
+  width: 19rem;
+  font-weight: 700;
+  margin-left: -4rem;
+  padding-left: 4rem;
+}
+.small-cards {
+  margin-left: -6rem;
+}
+.card-pair {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 50rem;
+}
+.small-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 1rem 3rem;
+  width: 10rem;
+  height: 5rem;
+  margin: 0.9rem;
+  justify-content: center;
+  background-color: #1e1e1e;
+}
+.small-card:hover {
+    cursor: pointer;
+  transition: ease-in-out 0.4s;
+  transform: scale(1.1);
+}
+.num {
+  color: #c91b28;
+}
+.num-des {
+  color: rgb(182, 175, 175);
+}
+.feature-head {
+  display: flex;
+  justify-content: space-around;
+}
+.project-head {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+.feature-head .about-me {
+  height: 3rem;
+}
+.projects {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.project-pair {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.project {
+  margin-bottom: 3rem;
+  margin-left: 2rem;
+}
+img[alt="first"] {
+  height: 17rem;
+  width: 30rem;
+}
+
+.project-img {
+  padding: 2rem 2rem;
+  background-color: #1e1e1e;
+}
+img[alt="first"]:hover {
+    cursor: pointer;
+  transition: ease-in-out 0.4s;
+  transform: scale(1.07);
+}
+.project-name {
+  padding: 1rem 0 1rem 0rem;
+}
+.ending-text {
+  display: flex;
+  justify-content: space-between;
+  width: 73vw;
+  background-color: #1e1e1e;
+}
+.bigtext {
+  padding: 2rem 4rem;
+  font-size: 1.5rem;
+}
+
+.just-text {
+  width: 50rem;
+}
+.just-text p {
+  padding: 0rem 4rem 2rem 4rem;
+}
+.ending-text .about-me {
+  margin-top: 5rem;
+  margin-right: 9rem;
+  height: 3rem;
+  border: none;
+}
+.bot-nav-list {
+  display: flex;
+  justify-content: space-around;
+  width: 40rem;
+  padding: 4rem;
+  color: #b9b6b6;
+}
+.nav-it {
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+footer {
+  margin-top: 2rem;
+  height: 8rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  background-color: #1e1e1e;
+}
+.logob {
+  padding: 3rem 0 0 12rem;
+}
+.socials {
+  padding-left: 20rem;
+  padding-top: 3rem;
+}
+footer img {
+  width: 9rem;
+  height: 3rem;
+  margin-right: 2rem;
+}
+img[alt="fb"] {
+  width: 2rem;
+  height: 2rem;
+  filter: invert(100%) sepia(12%) saturate(2%) hue-rotate(347deg)
+    brightness(106%) contrast(101%);
+}
+img[alt="tw"] {
+  width: 2rem;
+  height: 2rem;
+  filter: invert(100%) sepia(12%) saturate(2%) hue-rotate(347deg)
+    brightness(106%) contrast(101%);
+}
+img[alt="yt"] {
+  width: 2rem;
+  height: 2rem;
+  filter: invert(100%) sepia(12%) saturate(2%) hue-rotate(347deg)
+    brightness(106%) contrast(101%);
+}
+li a:hover {
+  color: #c91b28;
+}
+.socials img:hover {
+    cursor: pointer;
+  transition: ease-in-out 0.4s;
+  transform: scale(1.4);
+}
+button:hover {
+  cursor: pointer;
+  transition: ease-in 0.2s;
+  background-color: #fff;
+  color: #c91b28;
+  font-weight: 700;
+}
+.icon-menu{
+    display: none;
+}
+
+@media (max-width: 576px) {
+  img[alt="logo"] {
+    width: 10rem;
   }
-  to {
-    transform: rotate(360deg);
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .icon-menu {
+    display: block;
+    margin-left: 100%;
+  }
+  .nav-items {
+    display: none;
+  }
+  .nav-item {
+    padding-top: 0.1rem;
+  }
+  .nav-item a {
+    padding: 1rem 0;
+    margin: 1rem 0;
+    font-size: 0.6rem;
+  }
+  .intro {
+    flex-wrap: wrap;
+    padding-top: 5rem;
+  }
+  img[alt="guy"] {
+    margin-left: 30%;
+    padding: 0 0 0 0rem;
+    width: 30rem;
+  }
+  .intro-text {
+    margin-left: 30%;
+    width: 20rem;
+    z-index: 2;
+  }
+  .name-text {
+    padding-left: 2rem;
+    font-size: 1rem;
+  }
+  .designation {
+    padding-left: 2rem;
+    font-size: 1.5rem;
+  }
+  .description {
+    font-size: 0.5rem;
+    width: 17rem;
+    padding-top: 1rem;
+    padding-left: 2rem;
+  }
+  .about-me {
+    margin: 0 2rem;
+    padding: 0;
+    width: 5rem;
+    height: 2rem;
+    font-size: 0.4rem;
+  }
+  .backshadow {
+    width: 20rem;
+  }
+  .cards {
+    flex-wrap: wrap;
+    padding: 0;
+    margin-top: 5rem;
+    margin-left: 9rem;
+  }
+  .card {
+    flex-wrap: wrap;
+    margin-left: auto;
+    padding: 1rem;
+    width: 17rem;
+    height: 8rem;
+    font-size: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .textcard {
+    display: flex;
+    flex-direction: column;
+  }
+  .card-head {
+    margin-top: 1rem;
+  }
+  .card-des {
+    width: 7rem;
+  }
+  .know-more {
+    font-size: 0.6rem;
+  }
+  .arrow {
+    margin-top: 0.3rem;
+    transform: scale(0.6);
+  }
+  body > div.main > div.cards > div.card.mid > div.textcard > div > div {
+    background: rgb(255, 255, 255);
+  }
+  body > div.main > div.cards > div.card.mid > div.textcard > div > div::after {
+    background: rgb(255, 255, 255);
+  }
+  body
+    > div.main
+    > div.cards
+    > div.card.mid
+    > div.textcard
+    > div
+    > div::before {
+    background: rgb(255, 255, 255);
+  }
+  .numbers {
+    margin-top: 5rem;
+    font-size: 1rem;
+    flex-wrap: wrap;
+    margin-left: 50%;
+  }
+
+  .bignum {
+    font-size: 5rem;
+  }
+  .bigtext {
+    margin-left: -5rem;
+  }
+  .small-cards {
+    margin-right: -10rem;
+  }
+  .card-pair {
+    width: 35rem;
+  }
+  .feature {
+    margin: 0 0 0 25%;
+    padding: 0;
+    width: 35rem;
+  }
+  .feature-head {
+    padding: 1rem;
+    width: 100%;
+  }
+  .textfea {
+    width: 20rem;
+  }
+  .feature-head button {
+    width: 7rem;
+    margin-top: 1.5rem;
+    font-size: 0.7rem;
+  }
+  .projects {
+    padding: 0;
+  }
+  .project-pair {
+    flex-wrap: wrap;
+  }
+  .project {
+    transform: scale(0.9);
+    margin-bottom: 0;
+  }
+  .ending-text {
+    width: 40rem;
+    margin-left: 12rem;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .just-text {
+    width: 100%;
+    margin-bottom: -5rem;
+  }
+
+  .ending-text button {
+    width: 10rem;
+    margin-left: 4rem;
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+  }
+  .bot-nav-list {
+    margin: 4rem 1rem 4rem 10rem;
+    padding: 1rem 1rem;
+    width: 30rem;
+    justify-content: space-around;
+  }
+  .bigtext {
+    margin-left: 0;
+  }
+  footer {
+    display: flex;
+    justify-content: space-around;
+    width: 70rem;
+  }
+  .socials {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+  }
+}
+@media (min-width: 577px) and (max-width: 984px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  img[alt="logo"] {
+    width: 10rem;
+    margin: 0;
+  }
+  .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3rem;
+  }
+  .icon-menu{
+    display: block;
+    margin-right: -65%;
+  }
+  .nav-items {
+    display: none;
+  }
+  .nav-item {
+    padding-left: 3.5rem;
+  }
+  .nav-item a {
+    padding: 1rem 0;
+    margin: 1rem 0;
+    font-size: 0.6rem;
+  }
+  img[alt="guy"] {
+    margin-top: 0.1rem;
+    padding: 0 0 0 0rem;
+    width: 23rem;
+  }
+  .intro-text {
+    margin-top: -5rem;
+    width: 20rem;
+    z-index: 2;
+  }
+  .name-text {
+    padding-left: 2rem;
+    font-size: 1rem;
+  }
+  .designation {
+    padding-left: 2rem;
+    font-size: 1.5rem;
+  }
+  .description {
+    font-size: 0.5rem;
+    width: 17rem;
+    padding-top: 1rem;
+    padding-left: 2rem;
+  }
+  .about-me {
+    margin: 0 2rem;
+    padding: 0;
+    width: 5rem;
+    height: 2rem;
+    font-size: 0.4rem;
+  }
+  .backshadow {
+    margin-top: 22rem;
+    width: 30rem;
+  }
+  .cards {
+    flex-wrap: wrap;
+    padding: 0;
+    margin-top: -5rem;
+  }
+  .card {
+    flex-wrap: wrap;
+    margin-left: auto;
+    padding: 1rem;
+    width: 27rem;
+    height: 8rem;
+    font-size: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .textcard {
+    display: flex;
+    flex-direction: column;
+  }
+  .card-head {
+    margin-top: 1rem;
+  }
+  .card-des {
+    width: 7rem;
+  }
+  .know-more {
+    font-size: 0.6rem;
+  }
+  .arrow {
+    margin-top: 0.3rem;
+    transform: scale(0.6);
+  }
+  body > div.main > div.cards > div.card.mid > div.textcard > div > div {
+    background: rgb(255, 255, 255);
+  }
+  body > div.main > div.cards > div.card.mid > div.textcard > div > div::after {
+    background: rgb(255, 255, 255);
+  }
+  body
+    > div.main
+    > div.cards
+    > div.card.mid
+    > div.textcard
+    > div
+    > div::before {
+    background: rgb(255, 255, 255);
+  }
+  .numbers {
+    margin-top: 8rem;
+    font-size: 1rem;
+    padding: 0;
+    margin-left: 0rem;
+  }
+
+  .bignum {
+    font-size: 5rem;
+  }
+  .small-cards {
+    margin: 0;
+    padding: 0;
+    margin-left: -7rem;
+  }
+  .card-pair {
+    margin-left: -2rem;
+    width: 30rem;
+  }
+
+  .feature-head {
+    padding: 1rem;
+    width: 100%;
+  }
+  .textfea {
+    width: 20rem;
+  }
+  .feature-head button {
+    width: 7rem;
+    margin-top: 1.5rem;
+    font-size: 0.7rem;
+  }
+  .projects {
+    padding: 0;
+  }
+  .project-pair {
+    flex-wrap: wrap;
+    margin-left: 9rem;
+  }
+  .project {
+    transform: scale(0.9);
+    margin-bottom: 0;
+  }
+  .ending-text {
+    margin: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .just-text {
+    width: 100%;
+    margin-bottom: -5rem;
+  }
+  body > div.main > div.ending-text > div > p {
+  }
+  .ending-text button {
+    width: 10rem;
+    margin-left: 4rem;
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+  }
+  .bot-nav-list {
+    margin: 4rem 1rem 4rem 1rem;
+    padding: 1rem 1rem;
+    width: 30rem;
+    justify-content: space-between;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    height: 7rem;
+    padding-bottom: 1rem;
+    padding-left: 7rem;
+    margin-bottom: -230rem;
+  }
+  .socials {
+    padding-left: 12rem;
+  }
+}
+@media (min-width: 985px) and (max-width: 1458px) {
+  .navbar {
+    margin-left: 10rem;
+  }
+  .icon-menu{
+    display: hidden;
+}
+  .nav-items {
+    width: 30rem;
+    padding-left: 15rem;
+  }
+  .intro-img {
+    margin-left: 12rem;
+  }
+  .intro-text {
+    padding: 0;
+    width: 40rem;
+  }
+  .feature-head {
+    margin-left: 15rem;
+  }
+  .project-pair {
+    transform: scale(0.9);
+    margin-left: 10rem;
+  }
+  .ending-text {
+    width: 60rem;
+    margin-left: 15rem;
+  }
+  .bot-nav {
+    margin-left: 12rem;
+  }
+  footer {
+    width: 100%;
+  }
+}
+@media (min-width: 1920px) {
+  img[alt="logo"] {
+    width: 18rem;
+  }
+  .icon-menu{
+    display: hidden;
+}
+  .navbar {
+    justify-content: space-between;
+  }
+  .nav-items {
+    display: flex;
+    width: 80%;
+    margin-right: 20rem;
+    justify-content: space-around;
+    padding: 1rem 0rem;
+  }
+  .nav-item {
+    height: 2rem;
+    width: 18rem;
+  }
+  .nav-item a {
+    font-size: 1.5rem;
+  }
+  img[alt="guy"] {
+    width: 60rem;
+  }
+  .intro-text {
+    width: 80%;
+    z-index: 2;
+    margin-top: 29rem;
+  }
+  .name-text {
+    padding-left: 2rem;
+    font-size: 3rem;
+  }
+  .designation {
+    padding-left: 1.5rem;
+    font-size: 6rem;
+  }
+  .description {
+    font-size: 2rem;
+    width: 60%;
+    padding-top: 1rem;
+    padding-left: 2rem;
+  }
+  .about-me {
+    margin-left: 2rem;
+    font-size: 1rem;
+    width: 18rem;
+    padding: 2rem;
+  }
+  .backshadow {
+    margin-top: 62rem;
+    width: 80rem;
+    height: 70rem;
+  }
+  .cards {
+    padding: 0;
+    margin-top: 30rem;
+  }
+  .card {
+    justify-content: center;
+    margin-left: auto;
+    padding: 4rem;
+    width: 37rem;
+    height: 18rem;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .textcard {
+    display: flex;
+    flex-direction: column;
+  }
+  .card-head {
+    font-size: 2rem;
+  }
+  img[alt="note"] {
+    width: 15rem;
+  }
+  img[alt="tab"] {
+    width: 15rem;
+  }
+  img[alt="rule"] {
+    width: 15rem;
+  }
+  .card-des {
+    width: 27rem;
+  }
+  .know-more {
+    font-size: 1rem;
+  }
+  .arrow {
+    margin-top: 0.5rem;
+  }
+  body > div.main > div.cards > div.card.mid > div.textcard > div > div {
+    background: rgb(255, 255, 255);
+  }
+  body > div.main > div.cards > div.card.mid > div.textcard > div > div::after {
+    background: rgb(255, 255, 255);
+  }
+  body
+    > div.main
+    > div.cards
+    > div.card.mid
+    > div.textcard
+    > div
+    > div::before {
+    background: rgb(255, 255, 255);
+  }
+  .numbers {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  .bignum {
+    font-size: 12rem;
+  }
+  .numbers p {
+    font-size: 2.5rem;
+  }
+  .small-card {
+    width: 30rem;
+    height: 10rem;
+    font-size: 3rem;
+  }
+  .small-cards {
+    margin-left: 2rem;
+  }
+  body > div.main > div.numbers > div.bigtext > h3 {
+    font-size: 2rem;
+  }
+  .card-pair {
+    width: 90rem;
+    height: 15rem;
+  }
+  .feature {
+    width: 80%;
+    margin-left: -15rem;
+    padding-left: 0;
+  }
+  .feature-head {
+    padding: 2rem;
+    width: 100%;
+  }
+  .textfea {
+    font-size: 2rem;
+  }
+  .project-head {
+    font-size: 4rem;
+  }
+  .feature-head button {
+    width: 17rem;
+    min-height: 5rem;
+    font-size: 1.5rem;
+    padding: 1rem 4rem;
+  }
+  .projects {
+    padding: 0;
+  }
+  .project-pair {
+    justify-content: space-between;
+    margin: 9rem;
+  }
+  .project {
+    transform: scale(1.5);
+    margin-left: 3rem;
+  }
+  .ending-text {
+    width: 110%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .just-text {
+    width: 50%;
+  }
+  .bigtext {
+    font-size: 3rem;
+  }
+
+  body > div.main > div.ending-text > div > p {
+    font-size: 1.5rem;
+  }
+  .ending-text button {
+    width: 15rem;
+    min-height: 5rem;
+    font-size: 1rem;
+    margin-left: -19rem;
+    margin-bottom: 2rem;
+  }
+  .bot-nav {
+    width: 70%;
+    height: 7rem;
+    margin-left: -20rem;
+  }
+  .bot-nav-list {
+    width: 100%;
+    height: 7rem;
+    margin: 4rem 1rem 4rem 0rem;
+    padding: 1rem 1rem;
+    justify-content: space-between;
+  }
+  .nav-it a {
+    font-size: 2rem;
+  }
+  footer {
+    height: 10rem;
+    padding-bottom: 1rem;
+    padding-left: 7rem;
+    margin-bottom: -100rem;
+  }
+  .logob img[alt="logo"] {
+    width: 20rem;
+    height: 6rem;
+  }
+  .socials {
+    padding-left: 25rem;
   }
 }
