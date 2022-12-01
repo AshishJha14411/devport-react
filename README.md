@@ -20,7 +20,7 @@ This is a sample page made using react. The website focuses on implementing the 
 
 ### The deployed Version Link
 
-[Product Designer Landing Page](https://devport-react-akj.netlify.app/)
+[Landing Page](https://devport-react-akj.netlify.app/)
 
 ### SnapShot of the Webpage
 
